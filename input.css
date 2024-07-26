@@ -109,7 +109,7 @@ figure .desktop {
     box-sizing: border-box;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    width: 542px;
+    justify-items: center;
   }
   figure {
     border-radius: 10px 0 0 10px;

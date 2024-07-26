@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://github.com/Elle-ye/Product-preview-card-component)
+- Live Site URL: [Add live site URL here](https://elle-ye.github.io/Product-preview-card-component/)
 
 ## My process
 
@@ -47,11 +47,11 @@ Users should be able to:
 
 ### What I learned
 
-I learnt how to use Sass for styling. Its nesting, mixins, and variables are pretty convenient.
+Sass for styling. Its nesting, mixins, and variables are pretty convenient.
 
 ### Continued development
 
-......................................
+Would like to improve my Responsive designing skills.
 
 ### Useful resources
 
