@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap');
+
+$prim-100: hsl(158, 36%, 37%);
+$prim-200: hsl(30, 38%, 92%);
+$neutral-100: hsl(212, 21%, 14%);
+$neutral-200: hsl(228, 12%, 48%);
+$neutral-300: hsl(0, 0%, 100%);
+$font-size-100: 14px;
+$font-size-200: 1.5em;
+$font-size-300: 2em;
+$f-family-mon: 'Montserrat';
+$f-family-fraun: 'Fraunces';
+
+/* Body */
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: $prim-200;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    gap: 5px;
+    container-type: inline-size;
+}
+
+/* Main Card */
+main {
+    width: 343px;
+    box-sizing: border-box;
+    text-align: left;
+    background-color: $neutral-300;
+    border-radius: 10px;
+    margin: auto;
+}
+
+figure{
+    width: 100%;
+    height: 240px;
+    border-radius: 10px;
+
+    .mobile{
+        width: 100%;
+        object-fit: cover;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .desktop {
+    display: none;
+    }
+}
+
+@mixin fonts ($weight, $color, $size, $family) {
+    font-weight: $weight;
+    color: $color;
+    font-size: $size;
+    font-family: $family;
+}
+
+.container {
+    margin: 28px;
+    h2 {
+        @include fonts(700, $neutral-100, $font-size-300, $f-family-fraun);
+        padding-top: 18px;
+        padding-bottom: 24px;
+        line-height: 1;
+    }
+
+    h1, .text, .num2 {
+        @include fonts(500, $neutral-200, $font-size-100, $f-family-mon)
+    }
+
+    .text {
+        line-height: 1.5;
+        margin-bottom: 30px;
+    }
+
+    .num1 {
+        @include fonts(700, $prim-100, $font-size-200, $f-family-fraun);
+    }
+
+    .num2 {
+        text-decoration: line-through;
+        padding-left: 20px;
+    }
+    
+    button {
+        @include fonts(700, $neutral-300, $font-size-100, $f-family-mon);
+        width: 100%;
+        border-radius: 10px;
+        padding: 16px 0 16px 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+        background-color: $prim-100;
+        border: none;
+        margin-top: 20px;
+        
+        &:hover {
+            cursor: pointer;
+            background-color: darken($color: $prim-100, $amount: 25%);
+        }
+        &:focus {
+            background-color: darken($color: $prim-100, $amount: 25%);
+
+        }
+    }
+}
+
+@container (width > 40em) {
+    main {
+        width: 540px;
+        height: 405px;
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 542px;
+    }
+  
+    figure {
+        border-radius: 10px 0 0 10px;
+        height: 100%;
+  
+        .mobile {
+            display: none;
+        }
+  
+        .desktop{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            height: 100%;
+            border-radius: 10px 0 0 10px;
+        }
+    }
+  }

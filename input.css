@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Body */
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: hsl(30, 38%, 92%);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  gap: 5px;
+  container-type: inline-size;
+}
+
+/* Main Card */
+main {
+  width: 343px;
+  box-sizing: border-box;
+  text-align: left;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 10px;
+  margin: auto;
+}
+
+figure {
+  width: 100%;
+  height: 240px;
+  border-radius: 10px;
+}
+figure .mobile {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+figure .desktop {
+  display: none;
+}
+
+.container {
+  margin: 28px;
+}
+.container h2 {
+  font-weight: 700;
+  color: hsl(212, 21%, 14%);
+  font-size: 2em;
+  font-family: "Fraunces";
+  padding-top: 18px;
+  padding-bottom: 24px;
+  line-height: 1;
+}
+.container h1, .container .text, .container .num2 {
+  font-weight: 500;
+  color: hsl(228, 12%, 48%);
+  font-size: 14px;
+  font-family: "Montserrat";
+}
+.container .text {
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+.container .num1 {
+  font-weight: 700;
+  color: hsl(158, 36%, 37%);
+  font-size: 1.5em;
+  font-family: "Fraunces";
+}
+.container .num2 {
+  text-decoration: line-through;
+  padding-left: 20px;
+}
+.container button {
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+  font-size: 14px;
+  font-family: "Montserrat";
+  width: 100%;
+  border-radius: 10px;
+  padding: 16px 0 16px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  background-color: hsl(158, 36%, 37%);
+  border: none;
+  margin-top: 20px;
+}
+.container button:hover {
+  cursor: pointer;
+  background-color: #142a22;
+}
+.container button:focus {
+  background-color: #142a22;
+}
+
+@container (width > 40em) {
+  main {
+    width: 540px;
+    height: 405px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 542px;
+  }
+  figure {
+    border-radius: 10px 0 0 10px;
+    height: 100%;
+  }
+  figure .mobile {
+    display: none;
+  }
+  figure .desktop {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    display: block;
+    height: 100%;
+    border-radius: 10px 0 0 10px;
+  }
+}
